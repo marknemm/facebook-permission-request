@@ -1,0 +1,99 @@
+.social-result-list {
+    .social-result {
+        position: relative;
+        box-sizing: border-box;
+        max-width: 450px;
+        padding: 0;
+        margin: 20px 0;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.social-facebook .fb-post {
+            &.fb_iframe_widget[fb-xfbml-state="parsed"],
+            &.fb_iframe_widget:empty,
+            > blockquote {
+                display: none;
+            }
+
+            &.fb_iframe_widget {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+
+                span,
+                span iframe {
+                    max-width: 100% !important;
+                }
+            }
+        }
+
+        &.social-twitter .twitter-tweet {
+            display: none;
+
+            &.twitter-tweet-rendered {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                /* Need '!impotant' to override values set by twitter oembed script */
+                width: auto !important;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+            }
+        }
+
+        &.social-instagram {
+            .instagram-media,
+            .instagram-media-registered {
+                min-width: 0 !important;
+                max-width: 450px !important;
+                margin-left: 0;
+                margin-right: 0;
+                box-sizing: border-box;
+            }
+
+            .instagram-media {
+                display: none !important;
+                width: 100% !important;
+
+                &.instagram-media-rendered {
+					display: block !important;
+                }
+            }
+        }
+    }
+
+    .social-load-indicator {
+        margin-bottom: 7px;
+
+         + .social-result {
+            margin-top: 0;
+        }
+    }
+}
+
+.social-result-list .social-load-indicator,
+.no-social-results,
+.err-social-results {
+    font-size: 16px;
+}
+
+.social-result-list .social-load-indicator,
+.no-social-results {
+    color: @townsend-gray;
+}
+
+.err-social-results {
+    color: @interaction-orange;
+}
+
+.social-tmpl {
+    display: none;
+}

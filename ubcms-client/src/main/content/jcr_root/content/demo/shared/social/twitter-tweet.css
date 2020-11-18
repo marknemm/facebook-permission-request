@@ -1,0 +1,16 @@
+/* Following are styles that will be injected into Twitter tweet widgets' shadow DOMs */
+
+.MediaCard-widthConstraint {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tweet-InformationCircle {
+    display: none;
+}
+
+@media only screen and (max-width: 350px) {
+  .Tweet-text {
+    font-size: 12px;
+  }
+}
